@@ -1,0 +1,114 @@
+.nav-bar{
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position:absolute;
+    .logo{
+        display: block;
+        padding: 8px 0;
+        img{
+            display: block;
+            margin: 8px auto;
+            width:44px;
+            height:auto;
+            &.sub-logo{
+                width:50px;
+            }
+        }
+    }
+
+
+    nav{
+        display: block;
+        position: absolute;
+        text-align: center;
+        height:210px;
+        top:50%;
+        margin-top: -120px;
+        width: 100%;
+        line-height: 51px;       
+
+        a{
+            font-size: 22px;
+            display: block;
+            height:51px;
+            position: relative;
+            text-decoration: none;
+        
+        i{
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover{
+            color:  yellow;
+
+            svg{
+                opacity: 0;
+            }
+
+            &:after{
+                opacity: 1;
+            }
+        }
+
+        &:after{
+            content: '';
+            font-size: 9px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            text-align: center;
+        }
+
+        &:first-child{
+            &:after{
+                content: 'HOME';
+            }
+        }
+        }
+
+        a.about-link{
+            &::after{
+                content: 'ABOUT';
+            }
+        }
+        a.contact-link{
+            &::after{
+                content: 'CONTACT';
+            }
+        }
+        a.active{
+            svg{
+                color: yellow;
+            }
+        }
+    }
+
+    ul{
+        position: absolute;
+        display: block;
+        bottom: 15px;
+        width: 100%;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        li{
+            a{
+                padding: 8px 0;
+                font-size: 16px;
+                display: block;
+            }
+
+            &:hover svg{
+                color: yellow;
+            }
+        }
+
+    }
+}
